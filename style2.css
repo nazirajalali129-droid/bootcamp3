@@ -297,7 +297,7 @@ header[id] {
   position: relative;
   width: 100%;
   height: 100vh;
-  min-height: 760px;
+  min-height: 700px;
   overflow: hidden;
   background-image:
     linear-gradient(
@@ -321,12 +321,12 @@ header[id] {
   width: 100%;
   height: auto;
   min-height: auto;
-  padding: 130px 7.5% 55px;
+  padding: 130px 7% 55px;
   display: grid;
   grid-template-columns: 1.05fr 0.95fr;
   align-items: end;
   gap: 30px;
-  margin-top: auto;
+  margin-top: 90px;
 }
 
 /* HERO LEFT */
@@ -346,7 +346,7 @@ header[id] {
   position: relative;
   z-index: 25;
   width: fit-content;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   padding: 5px;
   border: 1px solid rgba(255, 255, 255, 0.48);
   border-radius: 25px;
@@ -409,7 +409,7 @@ header[id] {
   margin: 0 0 28px;
   color: #ffffff;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 50px;
+  font-size: 45px;
   font-weight: 280;
   line-height: 0.94;
   letter-spacing: -2.4px;
@@ -494,14 +494,14 @@ header[id] {
   position: relative;
   width: 100%;
   height: 100%;
-  min-height: 570px;
+  min-height: 500px;
   align-self: end;
 }
 
 .nil-glass-badge {
   position: absolute;
   z-index: 25;
-  padding: 6px;
+  padding: 4px;
   border: 1px solid rgba(255, 255, 255, 0.4);
   border-radius: 18px;
   background: rgba(112, 116, 109, 0.42);
@@ -526,17 +526,17 @@ header[id] {
 }
 
 .nil-badge-one {
-  top: 40%;
+  top: 35%;
   right: -9%;
 }
 
 .nil-badge-two {
-  top: 60%;
+  top: 50%;
   right: 45%;
 }
 
 .nil-icon-placeholder {
-  width: 35px;
+  width: 30px;
   height: 35px;
   flex-shrink: 0;
   overflow: hidden;
@@ -576,8 +576,8 @@ header[id] {
 .nil-solar-glass {
   position: absolute;
   z-index: 3;
-  width: 525px;
-  height: 370px;
+  width: 505px;
+  height: 350px;
   right: -135px;
   bottom: -72px;
   overflow: hidden;
@@ -599,8 +599,8 @@ header[id] {
   position: absolute;
   z-index: 5;
   width: 335px;
-  right: 48px;
-  bottom: 11px;
+  right: 80px;
+  bottom: -2px;
   object-fit: contain;
   transform: rotate(-8deg);
   filter: drop-shadow(0 18px 19px rgba(0, 0, 0, 0.32));
@@ -613,7 +613,7 @@ header[id] {
 
 .nil-client-badge {
   z-index: 30;
-  left: 2%;
+  left: -7%;
   bottom: 5px;
 }
 
@@ -2745,7 +2745,7 @@ header[id] {
   text-align: center;
   background-image:
     linear-gradient(rgba(2, 15, 5, 0.977), rgba(5, 20, 10, 0.68)),
-    url("images/footer.png");
+    url("images/footer.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -4170,209 +4170,934 @@ header[id] {
 /* =========================================================
    RESPONSIVE — SMALL MOBILE 520px
 ========================================================= */
+/* =========================================================
+   FINAL RESPONSIVE FIX
+   PROCESS + FOOTER
+   ========================================================= */
 
-@media (max-width: 520px) {
-  .nil-navbar {
-    top: 10px;
-    width: calc(100% - 24px);
-    height: 52px;
-    padding: 4px 7px;
-    border-radius: 28px;
+/* =========================================================
+   PROCESS SECTION — TABLET
+   Keep the original curved line + numbers
+========================================================= */
+
+@media (max-width: 900px) and (min-width: 701px) {
+  .process-section {
+    min-height: 600px;
+    padding: 35px 0;
   }
 
-  .nil-logo {
-    width: 68px;
+  .process-container {
+    width: calc(100% - 50px);
+    max-width: 1000px;
+    height: 500px;
+
+    /* Keep the original desktop layout */
+    transform: scale(0.82);
+    transform-origin: top center;
   }
 
-  .nil-search-button {
-    width: 36px;
-    height: 36px;
+  .line-wrapper {
+    margin-left: 23px;
   }
 
-  .nil-menu-button {
-    width: 36px;
-    height: 36px;
+  /* Keep numbers visible */
+  .step-number {
+    display: block;
   }
 
-  .nil-menu-button span {
-    width: 21px;
-    margin: 4px auto;
-  }
-
-  .nil-mobile-menu {
-    top: 70px;
-    width: calc(100% - 24px);
-    height: 300px;
-    padding: 15px 20px;
-    border-radius: 20px;
-  }
-
-  .nil-mobile-menu-inner {
-    gap: 13px;
-  }
-
-  .nil-mobile-link {
-    font-size: 12px;
-  }
-
-  .nil-hero {
-    min-height: 720px;
-  }
-
-  .nil-hero-content {
-    min-height: 720px;
-    padding: 105px 17px 40px;
-  }
-
-  .nil-made-india {
-    margin-bottom: 15px;
-    padding: 3px;
-  }
-
-  .nil-made-india-inner {
-    gap: 6px;
-    padding: 2px 9px 2px 2px;
-  }
-
-  .nil-india-flag {
-    width: 24px;
-    height: 24px;
-  }
-
-  .nil-made-india .nil-badge-text strong {
-    font-size: 9px;
-  }
-
-  .nil-hero-left h1 {
-    font-size: clamp(31px, 9.5vw, 44px);
-    letter-spacing: -1.4px;
-    line-height: 0.92;
-  }
-
-  .nil-hero-left h1 span.nil-type-line {
-    letter-spacing: -1.4px;
-  }
-
-  .nil-hero-left h1 strong.nil-type-line {
-    letter-spacing: -1.5px;
-  }
-
-  .nil-hero-description {
-    font-size: 12px;
-    line-height: 1.5;
-    max-width: 100%;
-  }
-
-  .nil-hero-buttons {
-    gap: 15px;
-  }
-
-  .nil-orange-button {
-    height: 38px;
-    padding: 0 15px;
-    font-size: 9px;
-  }
-
-  .nil-how-button {
-    font-size: 10px;
-  }
-
-  .nil-hero-right {
-    height: 280px;
-    min-height: 280px;
-    margin-top: 15px;
-  }
-
-  .nil-solar-glass {
-    width: 280px;
-    height: 205px;
-    right: -85px;
-    bottom: -15px;
-  }
-
-  .nil-solar-panel {
-    width: 190px;
-    right: 12px;
-    bottom: 7px;
-  }
-
-  .nil-badge-one {
-    right: -5px;
-    transform: scale(0.7);
-  }
-
-  .nil-badge-two {
-    left: -20px;
-    top: 80px;
-    transform: scale(0.7);
-  }
-
-  .nil-client-badge {
-    left: 0;
-    transform: scale(0.7);
+  /* Keep all three steps */
+  .step-one,
+  .step-two,
+  .step-three {
+    display: block;
   }
 }
 
 /* =========================================================
-   RESPONSIVE — VERY SMALL 380px
+   PROCESS SECTION — MOBILE
+   Same curved line, same numbers, responsive size
 ========================================================= */
 
-@media (max-width: 380px) {
-  .nil-hero-content {
-    padding-left: 14px;
-    padding-right: 14px;
+@media (max-width: 700px) {
+  .process-section {
+    width: 100%;
+    min-height: 700px;
+    padding: 35px 0 50px;
+    overflow: hidden;
   }
 
-  .nil-hero-left h1 {
-    font-size: 29px;
-    letter-spacing: -1.2px;
-  }
+  .process-container {
+    width: 100%;
+    height: 650px;
+    margin: 0;
+    position: relative;
 
-  .nil-hero-left h1 span.nil-type-line {
-    letter-spacing: -1.2px;
-  }
-
-  .nil-hero-left h1 strong.nil-type-line {
-    letter-spacing: -1.25px;
-  }
-
-  .nil-hero-description {
-    font-size: 11.5px;
-  }
-
-  .nil-solar-glass {
-    width: 250px;
-    height: 185px;
-    right: -75px;
-  }
-
-  .nil-solar-panel {
-    width: 170px;
-    right: 7px;
-  }
-}
-
-/* =========================================================
-   REDUCED MOTION
-========================================================= */
-
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation: none !important;
-    transition: none !important;
-  }
-
-  .arrow-part4,
-  .arrow-part4.active-part4 {
-    opacity: 1;
+    /* IMPORTANT:
+       Don't scale the whole container.
+       This keeps text readable.
+    */
     transform: none;
   }
 
-  .arrow-line-part4,
-  .arrow-head-part4 {
-    stroke-dashoffset: 0;
-    transition: none;
+  /* Heading */
+
+  .process-section .heading {
+    position: relative;
+    left: 20px;
+    top: 0;
+
+    width: calc(100% - 40px);
+    z-index: 10;
+  }
+
+  .process-section .heading span {
+    font-size: 8px;
+    padding: 6px 10px;
+    margin-bottom: 12px;
+  }
+
+  .process-section .heading h2 {
+    font-size: 25px;
+    line-height: 1.1;
+  }
+
+  /* =====================================================
+     LINE
+     
+     IMPORTANT:
+     We keep the EXACT SAME SVG PATH.
+     We only resize the SVG proportionally.
+  ===================================================== */
+
+  .line-wrapper {
+    position: absolute;
+
+    width: calc(100% - 30px);
+    height: 300px;
+
+    left: 15px;
+    top: 145px;
+
+    margin-left: 0;
+
+    z-index: 1;
+  }
+
+  .process-line {
+    width: 100%;
+    height: 100%;
+
+    /*
+      preserveAspectRatio is already "none" in HTML,
+      so the path fills the responsive area.
+    */
+  }
+
+  /* Keep line visible */
+
+  .line-shadow {
+    stroke-width: 5;
+  }
+
+  .main-line {
+    stroke-width: 3;
+  }
+
+  #movingDot {
+    r: 6;
+    stroke-width: 3;
+  }
+
+  /* =====================================================
+     STEP 1
+  ===================================================== */
+
+  .step-one {
+    left: 4%;
+    top: 300px;
+    z-index: 5;
+  }
+
+  .step-one .point {
+    top: -5px;
+    left: 20px;
+
+    width: 38px;
+    height: 38px;
+  }
+
+  .step-one .step-number {
+    display: block;
+
+    top: -25px;
+    left: 80px;
+
+    font-size: 85px;
+  }
+
+  .step-one .step-content {
+    margin-top: 48px;
+    width: 145px;
+  }
+
+  /* =====================================================
+     STEP 2
+  ===================================================== */
+
+  .step-two {
+    left: 38%;
+    top: 230px;
+    z-index: 5;
+  }
+
+  .step-two .point {
+    top: -5px;
+    left: 0;
+
+    width: 38px;
+    height: 38px;
+  }
+
+  .step-two .step-number {
+    display: block;
+
+    top: -5px;
+    left: 75px;
+
+    font-size: 85px;
+  }
+
+  .step-two .step-content {
+    margin-top: 55px;
+    width: 150px;
+  }
+
+  /* =====================================================
+     STEP 3
+  ===================================================== */
+
+  .step-three {
+    left: auto;
+    right: 4%;
+    top: 145px;
+    z-index: 5;
+  }
+
+  .step-three .point {
+    top: 0;
+    left: 0;
+
+    width: 38px;
+    height: 38px;
+  }
+
+  .step-three .step-number {
+    display: block;
+
+    top: -25px;
+    left: 65px;
+
+    font-size: 85px;
+  }
+
+  .step-three .step-content {
+    margin-top: 52px;
+    width: 145px;
+  }
+
+  /* Text */
+
+  .step-content h3 {
+    font-size: 12px;
+    line-height: 1.3;
+    margin-bottom: 7px;
+  }
+
+  .step-content p {
+    font-size: 10px;
+    line-height: 1.5;
+  }
+
+  /* Background circle */
+
+  .circle-one {
+    width: 190px;
+    height: 190px;
+    right: -90px;
+    top: 70px;
+  }
+}
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 430px) {
+  .process-section {
+    min-height: 690px;
+  }
+
+  .process-container {
+    height: 640px;
+  }
+
+  .line-wrapper {
+    width: calc(100% - 20px);
+    left: 10px;
+    top: 145px;
+    height: 280px;
+  }
+
+  /* Step 1 */
+
+  .step-one {
+    left: 2%;
+    top: 300px;
+  }
+
+  .step-one .step-number {
+    left: 65px;
+    font-size: 75px;
+  }
+
+  .step-one .step-content {
+    width: 125px;
+  }
+
+  /* Step 2 */
+
+  .step-two {
+    left: 37%;
+    top: 235px;
+  }
+
+  .step-two .step-number {
+    left: 65px;
+    font-size: 75px;
+  }
+
+  .step-two .step-content {
+    width: 125px;
+  }
+
+  /* Step 3 */
+
+  .step-three {
+    right: 2%;
+    top: 155px;
+  }
+
+  .step-three .step-number {
+    left: 55px;
+    font-size: 75px;
+  }
+
+  .step-three .step-content {
+    width: 125px;
+  }
+
+  .step-content h3 {
+    font-size: 11px;
+  }
+
+  .step-content p {
+    font-size: 9px;
+    line-height: 1.45;
+  }
+
+  .point {
+    width: 34px !important;
+    height: 34px !important;
+  }
+
+  .point span {
+    width: 11px;
+    height: 11px;
+  }
+}
+
+/* =========================================================
+   FOOTER
+   TABLET + MOBILE = 2 COLUMNS
+========================================================= */
+
+@media (max-width: 1000px) {
+  .footer-container-part4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
+  }
+}
+
+/* =========================================================
+   MOBILE FOOTER — STILL 2 COLUMNS
+========================================================= */
+
+@media (max-width: 700px) {
+  .footer-container-part4 {
+    width: 100%;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 28px 20px;
+
+    padding: 35px 20px;
+  }
+
+  .footer-column-part4 {
+    gap: 10px;
+  }
+
+  .footer-column-part4 h3,
+  .footer-social-part4 h3 {
+    font-size: 11px;
+  }
+
+  .footer-column-part4 a {
+    font-size: 9px;
+    padding: 3px 0;
+  }
+
+  .company-description-part4 {
+    font-size: 9px;
+    line-height: 1.5;
+  }
+
+  .contact-item-part4 {
+    gap: 8px;
+  }
+
+  .contact-icon-part4 {
+    width: 29px;
+    height: 29px;
+    font-size: 10px;
+  }
+
+  .contact-item-part4 span {
+    font-size: 8px;
+  }
+
+  .contact-item-part4 p {
+    font-size: 9px;
+  }
+
+  .social-icons-part4 {
+    gap: 6px;
+  }
+
+  .social-icons-part4 a {
+    width: 25px;
+    height: 25px;
+    font-size: 9px;
+  }
+
+  .address-part4 {
+    gap: 7px;
+  }
+
+  .address-part4 p {
+    font-size: 8px;
+  }
+
+  .footer-logo-img-part4 {
+    width: 75px;
+  }
+}
+
+/* =========================================================
+   EXTRA SMALL PHONE
+========================================================= */
+
+@media (max-width: 380px) {
+  .footer-container-part4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px 12px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .footer-column-part4 h3,
+  .footer-social-part4 h3 {
+    font-size: 10px;
+  }
+
+  .footer-column-part4 a {
+    font-size: 8px;
+  }
+
+  .company-description-part4 {
+    font-size: 8px;
+  }
+
+  .contact-item-part4 p {
+    font-size: 8px;
+  }
+}
+/* =========================================================
+   INDIA SECTION - BOTTOM CONTENT FIX
+========================================================= */
+
+.india-section {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Keep images and stats close */
+.india-section .image-layout {
+  height: auto;
+  min-height: 0;
+  margin-bottom: 2px;
+}
+
+/* Remove any line / border around bottom content */
+.india-section .bottom-content {
+  position: relative;
+  margin-top: 0;
+  padding-top: 0;
+
+  border: none !important;
+  border-top: none !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Remove lines from stats */
+.india-section .stats {
+  margin-top: 0;
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.india-section .stat {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+  .india-section .image-layout {
+    margin-bottom: 5px;
+  }
+
+  .india-section .bottom-content {
+    margin-top: 0;
+    padding-top: 0;
+    border: none !important;
+    box-shadow: none !important;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+  .india-section .image-layout {
+    margin-bottom: 2px;
+  }
+
+  .india-section .bottom-content {
+    margin-top: 0;
+    padding-top: 0;
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  .india-section .stats {
+    margin-top: 0;
+  }
+}
+/* =========================================================
+   NEWSLETTER - RESPONSIVE FOR ALL DEVICES
+========================================================= */
+
+.newsletter-part4 {
+  width: 100%;
+  overflow: hidden;
+}
+
+.newsletter-content-part4 {
+  width: min(1100px, 100%);
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
+}
+
+.subscribe-box-part4 {
+  width: min(750px, 100%);
+  margin: 30px auto 0;
+
+  display: flex;
+  align-items: stretch;
+
+  box-sizing: border-box;
+}
+
+.subscribe-box-part4 input {
+  flex: 1;
+  width: 100%;
+  min-width: 0;
+
+  height: 56px;
+
+  padding: 0 20px;
+
+  font-size: 15px;
+
+  border: 1px solid #000000;
+  border-radius: 0;
+
+  box-sizing: border-box;
+}
+
+.subscribe-box-part4 button {
+  flex: 0 0 auto;
+
+  min-width: 160px;
+  height: 56px;
+
+  padding: 0 25px;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  border: none;
+
+  cursor: pointer;
+
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   LAPTOP
+========================================================= */
+
+@media (max-width: 1200px) {
+  .newsletter-content-part4 {
+    max-width: 950px;
+  }
+
+  .subscribe-box-part4 {
+    width: min(700px, 100%);
+  }
+
+  .subscribe-box-part4 input {
+    height: 55px;
+    font-size: 15px;
+  }
+
+  .subscribe-box-part4 button {
+    min-width: 155px;
+    height: 55px;
+  }
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+  .newsletter-content-part4 {
+    width: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .subscribe-box-part4 {
+    width: 100%;
+    max-width: 680px;
+
+    display: flex;
+    flex-direction: row;
+
+    gap: 0;
+  }
+
+  .subscribe-box-part4 input {
+    flex: 1;
+
+    width: auto;
+    min-width: 0;
+
+    height: 55px;
+
+    padding: 0 20px;
+
+    font-size: 15px;
+  }
+
+  .subscribe-box-part4 button {
+    flex: 0 0 160px;
+
+    width: 160px;
+    min-width: 160px;
+
+    height: 55px;
+
+    padding: 0 15px;
+
+    font-size: 13px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+  .newsletter-content-part4 {
+    width: 100%;
+
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .subscribe-box-part4 {
+    width: 100%;
+    max-width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+
+    margin-top: 25px;
+  }
+
+  .subscribe-box-part4 input {
+    display: block;
+
+    width: 100% !important;
+    min-width: 100% !important;
+
+    flex: none;
+
+    height: 56px !important;
+    min-height: 56px !important;
+
+    padding: 0 18px !important;
+
+    font-size: 15px !important;
+
+    box-sizing: border-box;
+  }
+
+  .subscribe-box-part4 button {
+    display: block;
+
+    width: 100% !important;
+    min-width: 100% !important;
+
+    flex: none;
+
+    height: 56px !important;
+    min-height: 56px !important;
+
+    padding: 0 18px !important;
+
+    font-size: 14px !important;
+
+    box-sizing: border-box;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+  .newsletter-content-part4 {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .subscribe-box-part4 {
+    width: 100%;
+  }
+
+  .subscribe-box-part4 input {
+    width: 100% !important;
+
+    height: 54px !important;
+    min-height: 54px !important;
+
+    padding: 0 16px !important;
+
+    font-size: 14px !important;
+  }
+
+  .subscribe-box-part4 button {
+    width: 100% !important;
+
+    height: 54px !important;
+    min-height: 54px !important;
+
+    font-size: 13px !important;
+  }
+}
+/* =========================================================
+   NEWSLETTER - ROUND / PILL STYLE
+   ALL DEVICES
+========================================================= */
+
+.subscribe-box-part4 {
+  width: min(750px, 100%);
+  margin: 30px auto 0;
+
+  display: flex;
+  align-items: center;
+
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+/* EMAIL INPUT */
+
+.subscribe-box-part4 input {
+  flex: 1;
+  width: 100%;
+  min-width: 0;
+
+  height: 58px;
+
+  padding: 0 25px;
+
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+
+  border-radius: 50px 0 0 50px;
+
+  font-size: 15px;
+
+  box-sizing: border-box;
+}
+
+/* SUBSCRIBE BUTTON */
+
+.subscribe-box-part4 button {
+  flex: 0 0 auto;
+
+  height: 58px;
+  min-width: 170px;
+
+  padding: 0 28px;
+
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+
+  border-radius: 0 50px 50px 0;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+  .subscribe-box-part4 {
+    width: 100%;
+    max-width: 680px;
+
+    display: flex;
+    flex-direction: row;
+
+    border-radius: 50px;
+    overflow: hidden;
+  }
+
+  .subscribe-box-part4 input {
+    height: 56px;
+
+    border-radius: 50px 0 0 50px;
+
+    padding: 0 22px;
+
+    font-size: 15px;
+  }
+
+  .subscribe-box-part4 button {
+    height: 56px;
+    min-width: 155px;
+
+    border-radius: 0 50px 50px 0;
+
+    font-size: 13px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+  .subscribe-box-part4 {
+    width: 100%;
+    max-width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+
+    border-radius: 0;
+    overflow: visible;
+  }
+
+  .subscribe-box-part4 input {
+    width: 100% !important;
+    height: 56px !important;
+    min-height: 56px !important;
+
+    border-radius: 50px !important;
+
+    padding: 0 22px !important;
+
+    font-size: 15px !important;
+  }
+
+  .subscribe-box-part4 button {
+    width: 100% !important;
+    height: 56px !important;
+    min-height: 56px !important;
+
+    border-radius: 50px !important;
+
+    font-size: 14px !important;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+  .subscribe-box-part4 input {
+    height: 54px !important;
+    min-height: 54px !important;
+
+    border-radius: 50px !important;
+
+    padding: 0 20px !important;
+
+    font-size: 14px !important;
+  }
+
+  .subscribe-box-part4 button {
+    height: 54px !important;
+    min-height: 54px !important;
+
+    border-radius: 50px !important;
   }
 }
