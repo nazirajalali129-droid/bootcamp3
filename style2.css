@@ -5103,311 +5103,560 @@ header[id] {
 }
 
 /* =========================================================
-   HERO RESPONSIVE FIX — UI / UX
-   Keeps the existing design but makes the hero fluid
-   across desktop, tablet and mobile.
+   EAPRO HERO — FINAL RESPONSIVE SYSTEM
+   Only the HERO is changed here.
+   All other sections remain untouched.
 ========================================================= */
 
-.nil-hero {
-  min-height: 720px;
-  height: max(720px, 100svh);
-}
+/* =========================
+   DESKTOP — 1201px+
+========================= */
 
-.nil-hero-content {
-  width: min(1240px, 100%);
-  margin: 0 auto;
-  padding: 120px 5.5% 60px;
-  grid-template-columns: minmax(0, 1fr) minmax(420px, 0.9fr);
-  gap: clamp(24px, 4vw, 64px);
-  align-items: center;
-}
+@media (min-width: 1201px) {
 
-.nil-hero-left {
-  max-width: 620px;
-  align-self: center;
-}
-
-.nil-hero-right {
-  min-height: 520px;
-  height: 520px;
-  align-self: center;
-}
-
-.nil-hero-left h1 {
-  max-width: 620px;
-  font-size: clamp(42px, 4.2vw, 64px);
-  line-height: 0.94;
-  letter-spacing: -2.2px;
-}
-
-.nil-hero-description {
-  max-width: 540px;
-  font-size: clamp(13px, 1.1vw, 15px);
-  line-height: 1.65;
-}
-
-.nil-hero-buttons {
-  flex-wrap: wrap;
-}
-
-/* Keep decorative elements inside the visual column */
-.nil-solar-glass {
-  width: min(525px, 46vw);
-  height: min(370px, 34vw);
-  right: clamp(-100px, -7vw, -40px);
-  bottom: -45px;
-}
-
-.nil-solar-panel {
-  width: min(335px, 30vw);
-  right: clamp(30px, 4vw, 55px);
-}
-
-.nil-badge-one {
-  top: 18%;
-  right: 0;
-}
-
-.nil-badge-two {
-  top: 52%;
-  right: 35%;
-}
-
-.nil-client-badge {
-  left: 0;
-  bottom: 10px;
-}
-
-/* =========================================================
-   TABLET
-========================================================= */
-
-@media (max-width: 1100px) {
   .nil-hero {
-    min-height: 680px;
-    height: auto;
+    width: 100%;
+    min-height: 700px;
+    height: 100vh;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center center;
   }
 
   .nil-hero-content {
-    grid-template-columns: minmax(0, 1fr) minmax(360px, 0.85fr);
-    padding: 125px 5% 55px;
-    gap: 25px;
-  }
-
-  .nil-hero-left h1 {
-    font-size: clamp(40px, 5vw, 56px);
-  }
-
-  .nil-hero-right {
-    min-height: 450px;
-    height: 450px;
-  }
-
-  .nil-solar-glass {
-    width: 410px;
-    height: 300px;
-    right: -75px;
-    bottom: -35px;
-  }
-
-  .nil-solar-panel {
-    width: 270px;
-    right: 30px;
-  }
-
-  .nil-badge-white {
-    min-width: 185px;
-  }
-}
-
-/* =========================================================
-   SMALL TABLET / LARGE PHONE
-========================================================= */
-
-@media (max-width: 900px) {
-  .nil-hero {
-    min-height: 0;
-    height: auto;
-    display: block;
-  }
-
-  .nil-hero-content {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    min-height: 0;
+    width: min(1400px, 100%);
+    min-height: 700px;
+    margin: 0 auto;
     padding: 120px 6% 55px;
-    gap: 30px;
+
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(420px, 0.95fr);
+    align-items: center;
+    gap: clamp(30px, 4vw, 65px);
   }
 
   .nil-hero-left {
     width: 100%;
-    max-width: 680px;
-    margin: 0 auto;
-    align-self: auto;
+    max-width: 620px;
+    align-self: center;
   }
 
   .nil-hero-left h1 {
-    max-width: 680px;
-    font-size: clamp(42px, 7vw, 60px);
-    line-height: 0.95;
+    width: 100%;
+    max-width: 620px;
+    font-size: clamp(44px, 4vw, 60px);
+    line-height: 0.94;
+    letter-spacing: -2.5px;
+  }
+
+  .nil-hero-left h1 span.nil-type-line,
+  .nil-hero-left h1 strong.nil-type-line {
+    white-space: nowrap;
   }
 
   .nil-hero-description {
-    max-width: 600px;
+    width: 100%;
+    max-width: 590px;
+    font-size: 15px;
+    line-height: 1.55;
   }
 
   .nil-hero-right {
+    position: relative;
     width: 100%;
-    max-width: 620px;
-    height: 390px;
-    min-height: 390px;
-    margin: 0 auto;
-    align-self: auto;
+    height: 500px;
+    min-height: 500px;
+    align-self: center;
   }
 
   .nil-solar-glass {
-    width: 430px;
-    height: 300px;
-    right: -35px;
-    bottom: -25px;
+    width: min(505px, 42vw);
+    height: min(350px, 30vw);
+    right: clamp(-135px, -8vw, -70px);
+    bottom: -55px;
   }
 
   .nil-solar-panel {
-    width: 285px;
-    right: 20px;
-    bottom: 8px;
+    width: min(335px, 29vw);
+    right: clamp(35px, 5vw, 80px);
+    bottom: 0;
   }
 
   .nil-badge-one {
-    top: 10px;
-    right: 5px;
+    top: 25%;
+    right: -4%;
   }
 
   .nil-badge-two {
-    top: 125px;
-    left: 0;
-    right: auto;
+    top: 50%;
+    right: 38%;
   }
 
   .nil-client-badge {
-    left: 0;
-    bottom: 5px;
+    left: -3%;
+    bottom: 0;
   }
 }
 
-/* =========================================================
-   MOBILE
-========================================================= */
 
-@media (max-width: 600px) {
+/* =========================
+   LAPTOP — 901px to 1200px
+========================= */
+
+@media (min-width: 901px) and (max-width: 1200px) {
+
+  .nil-hero {
+    min-height: 650px;
+    height: auto;
+    background-size: cover;
+    background-position: center center;
+  }
+
   .nil-hero-content {
-    padding: 105px 20px 35px;
-    gap: 22px;
+    width: 100%;
+    min-height: 650px;
+    margin: 0 auto;
+    padding: 115px 5% 45px;
+
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(330px, 0.85fr);
+    align-items: center;
+    gap: 25px;
+  }
+
+  .nil-hero-left {
+    max-width: 570px;
+    align-self: center;
   }
 
   .nil-hero-left h1 {
-    font-size: clamp(34px, 10.5vw, 48px);
-    line-height: 0.96;
-    letter-spacing: -1.6px;
-    margin-bottom: 20px;
+    max-width: 570px;
+    font-size: clamp(38px, 5vw, 50px);
+    line-height: 0.95;
+    letter-spacing: -2px;
+  }
+
+  .nil-hero-left h1 span.nil-type-line,
+  .nil-hero-left h1 strong.nil-type-line {
+    white-space: normal;
   }
 
   .nil-hero-description {
-    max-width: 100%;
-    margin-bottom: 22px;
-    font-size: 13px;
+    max-width: 500px;
+    font-size: 14px;
     line-height: 1.55;
   }
 
   .nil-hero-buttons {
-    align-items: center;
-    gap: 14px;
-  }
-
-  .nil-orange-button {
-    min-height: 42px;
-    padding: 0 16px;
-  }
-
-  .nil-how-button {
-    min-height: 42px;
-    display: inline-flex;
-    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
   }
 
   .nil-hero-right {
-    height: 300px;
-    min-height: 300px;
-    max-width: 500px;
+    width: 100%;
+    height: 410px;
+    min-height: 410px;
   }
 
   .nil-solar-glass {
-    width: 315px;
-    height: 225px;
-    right: -65px;
-    bottom: -18px;
-    border-radius: 180px 180px 0 0;
+    width: 390px;
+    height: 280px;
+    right: -85px;
+    bottom: -35px;
   }
 
   .nil-solar-panel {
-    width: 205px;
-    right: 8px;
-    bottom: 7px;
-  }
-
-  .nil-badge-white {
-    min-width: 170px;
-    min-height: 50px;
-    padding: 7px 10px;
-    gap: 8px;
-  }
-
-  .nil-glass-badge {
-    padding: 5px;
-    border-radius: 15px;
-  }
-
-  .nil-icon-placeholder {
-    width: 31px;
-    height: 31px;
-  }
-
-  .nil-badge-text small {
-    font-size: 8px;
-  }
-
-  .nil-badge-text strong {
-    font-size: 9px;
+    width: 255px;
+    right: 25px;
+    bottom: 0;
   }
 
   .nil-badge-one {
-    top: 0;
-    right: 0;
-    transform: none;
+    top: 15%;
+    right: -2%;
   }
 
   .nil-badge-two {
-    top: 82px;
-    left: 0;
-    transform: none;
+    top: 48%;
+    right: 30%;
   }
 
   .nil-client-badge {
     left: 0;
     bottom: 0;
-    transform: none;
+  }
+}
+
+
+/* =========================
+   TABLET — 701px to 900px
+========================= */
+
+@media (min-width: 701px) and (max-width: 900px) {
+
+  .nil-hero {
+    min-height: 620px;
+    height: auto;
+    overflow: hidden;
+
+    background-size: cover;
+    background-position: 60% center;
+  }
+
+  .nil-hero-content {
+    width: 100%;
+    min-height: 620px;
+    margin: 0;
+
+    padding: 115px 35px 40px;
+
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 0.72fr);
+    align-items: center;
+    gap: 15px;
+  }
+
+  .nil-hero-left {
+    width: 100%;
+    max-width: 480px;
+  }
+
+  .nil-made-india {
+    margin-bottom: 18px;
+  }
+
+  .nil-hero-left h1 {
+    max-width: 480px;
+    font-size: clamp(34px, 5.5vw, 44px);
+    line-height: 0.96;
+    letter-spacing: -1.7px;
+    margin-bottom: 20px;
+  }
+
+  .nil-hero-left h1 span.nil-type-line,
+  .nil-hero-left h1 strong.nil-type-line {
+    white-space: normal;
+  }
+
+  .nil-hero-description {
+    max-width: 420px;
+    font-size: 13px;
+    line-height: 1.55;
+    margin-bottom: 22px;
+  }
+
+  .nil-hero-buttons {
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .nil-orange-button {
+    height: 42px;
+    padding: 0 17px;
+    font-size: 10px;
+  }
+
+  .nil-how-button {
+    font-size: 11px;
+  }
+
+  .nil-hero-right {
+    width: 100%;
+    height: 350px;
+    min-height: 350px;
+  }
+
+  .nil-solar-glass {
+    width: 330px;
+    height: 235px;
+    right: -95px;
+    bottom: -25px;
+  }
+
+  .nil-solar-panel {
+    width: 225px;
+    right: 20px;
+    bottom: 5px;
+  }
+
+  .nil-badge-white {
+    min-width: 175px;
+  }
+
+  .nil-badge-one {
+    top: 5%;
+    right: -8%;
+  }
+
+  .nil-badge-two {
+    top: 42%;
+    right: 8%;
+  }
+
+  .nil-client-badge {
+    left: -5%;
+    bottom: 0;
+  }
+}
+
+
+/* =========================
+   MOBILE — 481px to 700px
+========================= */
+
+@media (min-width: 481px) and (max-width: 700px) {
+
+  .nil-hero {
+    min-height: 700px;
+    height: auto;
+    overflow: hidden;
+
+    background-size: cover;
+    background-position: 62% center;
+  }
+
+  .nil-hero-content {
+    width: 100%;
+    min-height: 700px;
+    margin: 0;
+
+    padding: 110px 24px 35px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 20px;
+  }
+
+  .nil-hero-left {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .nil-made-india {
+    margin-bottom: 17px;
+  }
+
+  .nil-hero-left h1 {
+    max-width: 100%;
+    font-size: clamp(32px, 8vw, 43px);
+    line-height: 0.97;
+    letter-spacing: -1.5px;
+    margin-bottom: 18px;
+  }
+
+  .nil-hero-left h1 span.nil-type-line,
+  .nil-hero-left h1 strong.nil-type-line {
+    white-space: normal;
+  }
+
+  .nil-hero-description {
+    max-width: 440px;
+    font-size: 13px;
+    line-height: 1.55;
+    margin-bottom: 20px;
+  }
+
+  .nil-hero-buttons {
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .nil-orange-button {
+    height: 42px;
+    padding: 0 17px;
+    font-size: 10px;
+  }
+
+  .nil-how-button {
+    font-size: 10px;
+  }
+
+  .nil-hero-right {
+    width: 100%;
+    max-width: 560px;
+    height: 300px;
+    min-height: 300px;
+    margin: 0 auto;
+  }
+
+  .nil-solar-glass {
+    width: 285px;
+    height: 210px;
+    right: -70px;
+    bottom: -20px;
+  }
+
+  .nil-solar-panel {
+    width: 195px;
+    right: 8px;
+    bottom: 5px;
+  }
+
+  .nil-badge-one {
+    top: 0;
+    right: 0;
+    transform: scale(0.75);
+    transform-origin: right top;
+  }
+
+  .nil-badge-two {
+    top: 78px;
+    left: 0;
+    right: auto;
+    transform: scale(0.75);
+    transform-origin: left top;
+  }
+
+  .nil-client-badge {
+    left: 0;
+    bottom: 0;
+    transform: scale(0.75);
+    transform-origin: left bottom;
   }
 
   .nil-client-white {
     min-width: 210px;
-    min-height: 54px;
-    padding: 7px 11px;
+  }
+}
+
+
+/* =========================
+   MOBILE — 480px AND BELOW
+========================= */
+
+@media (max-width: 480px) {
+
+  .nil-hero {
+    min-height: 650px;
+    height: auto;
+    overflow: hidden;
+
+    background-size: cover;
+    background-position: 62% center;
+  }
+
+  .nil-hero-content {
+    width: 100%;
+    min-height: 650px;
+    margin: 0;
+
+    padding: 105px 20px 30px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 17px;
+  }
+
+  .nil-hero-left {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .nil-made-india {
+    margin-bottom: 15px;
+  }
+
+  .nil-made-india-inner {
+    gap: 7px;
+    padding-right: 10px;
+  }
+
+  .nil-india-flag {
+    width: 26px;
+    height: 26px;
+  }
+
+  .nil-made-india .nil-badge-text strong {
+    font-size: 10px;
+  }
+
+  .nil-hero-left h1 {
+    max-width: 100%;
+    font-size: clamp(29px, 9.5vw, 39px);
+    line-height: 0.98;
+    letter-spacing: -1.3px;
+    margin-bottom: 18px;
+  }
+
+  .nil-hero-left h1 span.nil-type-line,
+  .nil-hero-left h1 strong.nil-type-line {
+    white-space: normal;
+  }
+
+  .nil-hero-description {
+    max-width: 100%;
+    font-size: 12.5px;
+    line-height: 1.55;
+    margin-bottom: 20px;
+  }
+
+  .nil-hero-buttons {
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .nil-orange-button {
+    height: 41px;
+    padding: 0 15px;
+    font-size: 9px;
+  }
+
+  .nil-how-button {
+    font-size: 10px;
+  }
+
+  .nil-hero-right {
+    width: 100%;
+    height: 245px;
+    min-height: 245px;
+    margin: 0;
+  }
+
+  .nil-solar-glass {
+    width: 250px;
+    height: 190px;
+    right: -65px;
+    bottom: -18px;
+  }
+
+  .nil-solar-panel {
+    width: 175px;
+    right: 4px;
+    bottom: 5px;
+  }
+
+  .nil-badge-one {
+    top: 0;
+    right: 0;
+    transform: scale(0.64);
+    transform-origin: right top;
+  }
+
+  .nil-badge-two {
+    top: 70px;
+    left: 0;
+    right: auto;
+    transform: scale(0.64);
+    transform-origin: left top;
+  }
+
+  .nil-client-badge {
+    left: 0;
+    bottom: 0;
+    transform: scale(0.64);
+    transform-origin: left bottom;
+  }
+
+  .nil-client-white {
+    min-width: 190px;
   }
 
   .nil-client-image {
-    width: 31px;
-    height: 31px;
+    width: 32px;
+    height: 32px;
   }
 
   .nil-client-text strong {
@@ -5419,114 +5668,147 @@ header[id] {
   }
 }
 
-/* =========================================================
-   SMALL MOBILE
-========================================================= */
 
-@media (max-width: 420px) {
+/* =========================
+   VERY SMALL PHONES — 380px
+========================= */
+
+@media (max-width: 380px) {
+
+  .nil-hero {
+    min-height: 610px;
+  }
+
   .nil-hero-content {
-    padding: 98px 16px 30px;
-    gap: 18px;
+    min-height: 610px;
+    padding: 98px 15px 25px;
+    gap: 15px;
   }
 
   .nil-hero-left h1 {
-    font-size: clamp(31px, 10vw, 40px);
-    letter-spacing: -1.3px;
+    font-size: 28px;
+    letter-spacing: -1.1px;
   }
 
   .nil-hero-description {
-    font-size: 12px;
-  }
-
-  .nil-hero-buttons {
-    gap: 10px;
+    font-size: 11.5px;
   }
 
   .nil-orange-button {
-    min-height: 40px;
+    height: 39px;
     padding: 0 13px;
-    font-size: 9px;
+    font-size: 8.5px;
   }
 
   .nil-how-button {
-    font-size: 10px;
+    font-size: 9px;
   }
 
   .nil-hero-right {
-    height: 255px;
-    min-height: 255px;
+    height: 220px;
+    min-height: 220px;
   }
 
   .nil-solar-glass {
-    width: 275px;
-    height: 195px;
-    right: -62px;
-    bottom: -12px;
+    width: 225px;
+    height: 170px;
+    right: -58px;
+    bottom: -15px;
   }
 
   .nil-solar-panel {
-    width: 180px;
-    right: 4px;
+    width: 155px;
+    right: 0;
+    bottom: 5px;
   }
 
-  .nil-badge-white {
-    min-width: 155px;
-    min-height: 46px;
-    padding: 6px 8px;
+  .nil-badge-one {
+    transform: scale(0.56);
   }
 
-  .nil-icon-placeholder {
-    width: 27px;
-    height: 27px;
+  .nil-badge-two {
+    transform: scale(0.56);
+    top: 62px;
   }
 
-  .nil-badge-text small {
-    font-size: 7px;
-  }
-
-  .nil-badge-text strong {
-    font-size: 8px;
-  }
-
-  .nil-client-white {
-    min-width: 190px;
+  .nil-client-badge {
+    transform: scale(0.56);
   }
 }
+
 
 /* =========================================================
-   EXTRA SMALL PHONES
+   HERO NAVBAR — RESPONSIVE
+   Keeps the existing navbar style.
 ========================================================= */
 
-@media (max-width: 360px) {
-  .nil-hero-content {
-    padding-left: 13px;
-    padding-right: 13px;
+@media (max-width: 800px) {
+
+  .nil-navbar {
+    top: 12px;
+    left: 50%;
+    width: calc(100% - 28px);
+    height: 54px;
+    padding: 5px 8px;
+    transform: translateX(-50%);
   }
 
-  .nil-hero-left h1 {
-    font-size: 29px;
+  .nil-logo-link {
+    width: auto;
+    padding-left: 5px;
   }
 
-  .nil-hero-right {
-    height: 235px;
-    min-height: 235px;
+  .nil-logo {
+    width: 72px;
   }
 
-  .nil-solar-glass {
-    width: 250px;
-    height: 180px;
-    right: -55px;
+  .nil-nav-links,
+  .nil-power-button {
+    display: none;
   }
 
-  .nil-solar-panel {
-    width: 165px;
+  .nil-menu-button {
+    display: block;
   }
 
-  .nil-badge-white {
-    min-width: 145px;
+  .nil-search-button {
+    width: 38px;
+    height: 38px;
   }
 
-  .nil-client-white {
-    min-width: 175px;
+  .nil-nav-actions {
+    gap: 4px;
+  }
+
+  .nil-mobile-menu {
+    top: 75px;
+    width: calc(100% - 28px);
   }
 }
+
+
+/* =========================================================
+   HERO — PREVENT HORIZONTAL OVERFLOW
+========================================================= */
+
+.nil-hero,
+.nil-hero-content,
+.nil-hero-left,
+.nil-hero-right {
+  max-width: 100%;
+}
+
+.nil-hero img {
+  max-width: 100%;
+}
+
+@media (max-width: 800px) {
+  .nil-hero {
+    overflow-x: hidden;
+  }
+
+  .nil-hero-content {
+    overflow: visible;
+  }
+}
+
