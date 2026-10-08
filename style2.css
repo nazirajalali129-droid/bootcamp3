@@ -1771,70 +1771,71 @@ header[id] {
 
 .heart-bg {
   position: absolute;
-
-  width: 390px;
-  height: 300px;
-
-  top: -18px;
+  width: clamp(150px, 24vw, 260px);
+  height: clamp(130px, 20vw, 220px);
+  top: clamp(-4px, -0.5vw, -10px);
   left: 50%;
-
   transform: translateX(-50%);
-
   z-index: 0;
-
   pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.heart-bg svg {
+.heart-image {
+  position: relative;
+  width: clamp(70px, 8vw, 100px);
+  height: auto;
+  display: block;
+  z-index: 2;
+  object-fit: contain;
+  transform-origin: center;
+  animation: heartPulse 1.15s ease-in-out infinite;
+  will-change: transform;
+}
+
+.heart-ping {
   position: absolute;
-  inset: 0;
-
-  width: 100%;
-  height: 100%;
-
-  overflow: visible;
-}
-
-.heart-bg svg path {
-  fill: none;
-
-  stroke: #f0f1f0;
-  stroke-width: 3.5;
-
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-.heart-yellow {
-  position: absolute;
-
-  width: 245px;
-  height: 105px;
-
+  width: clamp(70px, 8vw, 100px);
+  height: auto;
   left: 50%;
-  top: 67px;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+  display: block;
+  object-fit: contain;
+  opacity: 0;
+  z-index: 1;
+  animation: heartPing 1.6s ease-out infinite;
+  pointer-events: none;
+  will-change: transform, opacity;
+}
 
-  transform: translateX(-50%);
+@keyframes heartPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
 
-  z-index: -1;
+  50% {
+    transform: scale(1.16);
+  }
+}
 
-  border-radius: 50% 50% 48% 48%;
+@keyframes heartPing {
+  0% {
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 0.8;
+  }
 
-  background:
-    radial-gradient(
-      ellipse at 35% 45%,
-      rgba(242, 207, 112, 0.32),
-      rgba(242, 207, 112, 0.13) 43%,
-      transparent 72%
-    ),
-    radial-gradient(
-      ellipse at 67% 45%,
-      rgba(242, 207, 112, 0.32),
-      rgba(242, 207, 112, 0.12) 43%,
-      transparent 72%
-    );
+  70% {
+    transform: translate(-50%, -50%) scale(2);
+    opacity: 0;
+  }
 
-  filter: blur(8px);
+  100% {
+    transform: translate(-50%, -50%) scale(2);
+    opacity: 0;
+  }
 }
 
 .small-title {
@@ -3945,15 +3946,14 @@ header[id] {
   }
 
   .heart-bg {
-    width: 300px;
-    height: 245px;
-    top: -8px;
+    width: 210px;
+    height: 175px;
+    top: -2px;
   }
 
-  .heart-yellow {
-    width: 185px;
-    height: 82px;
-    top: 54px;
+  .heart-image,
+  .heart-ping {
+    width: 72px;
   }
 
   .small-title {
