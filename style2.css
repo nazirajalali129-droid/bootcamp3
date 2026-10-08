@@ -5721,7 +5721,7 @@ header[id] {
   /* HERO */
 
   .nil-hero {
-    min-height: 900px;
+    min-height: 800px;
 
     align-items: flex-start;
 
@@ -5729,18 +5729,18 @@ header[id] {
   }
 
   .nil-hero-content {
-    min-height: 900px;
+    min-height: 700px;
 
-    padding: 140px 7% 60px;
+    padding: 140px 8% 60px;
 
     display: flex;
 
     flex-direction: column;
 
     justify-content: flex-end;
-
+    top: -1%;
+    bottom: -10px;
     align-items: stretch;
-
     gap: 20px;
   }
 
