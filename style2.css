@@ -1810,16 +1810,18 @@ header[id] {
   position: absolute;
 
   width: clamp(75px, 11vw, 125px);
-  aspect-ratio: 1;
+  height: auto;
 
   left: 50%;
   top: 50%;
 
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(0.8);
 
-  border-radius: 50%;
+  display: block;
 
-  border: 3px solid rgba(245, 169, 0, 0.35);
+  object-fit: contain;
+
+  opacity: 0;
 
   z-index: 1;
 
@@ -1840,17 +1842,17 @@ header[id] {
 
 @keyframes heartPing {
   0% {
-    transform: translate(-50%, -50%) scale(0.75);
-    opacity: 0.75;
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 0.45;
   }
 
-  70% {
-    transform: translate(-50%, -50%) scale(1.45);
+  65% {
+    transform: translate(-50%, -50%) scale(1.55);
     opacity: 0;
   }
 
   100% {
-    transform: translate(-50%, -50%) scale(1.45);
+    transform: translate(-50%, -50%) scale(1.55);
     opacity: 0;
   }
 }
