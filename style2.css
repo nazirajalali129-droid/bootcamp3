@@ -1773,7 +1773,7 @@ header[id] {
   position: absolute;
   width: clamp(150px, 24vw, 260px);
   height: clamp(130px, 20vw, 220px);
-  top: clamp(-4px, -0.5vw, -10px);
+  top: -30px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 0;
@@ -3953,8 +3953,6 @@ header[id] {
   }
 
   .heart-image,
-  
-
   .small-title {
     margin-top: 94px;
     height: 31px;
@@ -5839,21 +5837,6 @@ header[id] {
     transform: translateX(-50%);
   }
 }
-/* ================================
-   HEART
-================================ */
-
-
-
-/* Main Heart Image */
-
-
-/* Ping Effect */
-
-
-/* ================================
-   PULSE
-================================ */
 
 @keyframes heartPulse {
   0%,
@@ -5864,26 +5847,4 @@ header[id] {
   50% {
     transform: scale(1.15);
   }
-}
-
-/* ================================
-   MOBILE
-================================ */
-
-@media (max-width: 768px) {
-  
-
-  .heart-image,
-  
-}
-
-/* ================================
-   SMALL MOBILE
-================================ */
-
-@media (max-width: 480px) {
-  
-
-  .heart-image,
-  
 }
