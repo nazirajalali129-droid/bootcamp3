@@ -1771,19 +1771,13 @@ header[id] {
 
 .heart-bg {
   position: absolute;
-
-  width: clamp(180px, 32vw, 390px);
-  height: clamp(150px, 25vw, 300px);
-
-  top: clamp(-10px, -1.5vw, -18px);
+  width: clamp(150px, 24vw, 260px);
+  height: clamp(130px, 20vw, 220px);
+  top: clamp(-4px, -0.5vw, -10px);
   left: 50%;
-
   transform: translateX(-50%);
-
   z-index: 0;
-
   pointer-events: none;
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1791,43 +1785,30 @@ header[id] {
 
 .heart-image {
   position: relative;
-
-  width: clamp(75px, 11vw, 125px);
+  width: clamp(70px, 8vw, 100px);
   height: auto;
-
   display: block;
-
   z-index: 2;
-
   object-fit: contain;
-
   transform-origin: center;
-
-  animation: heartPulse 1.5s ease-in-out infinite;
+  animation: heartPulse 1.15s ease-in-out infinite;
+  will-change: transform;
 }
 
 .heart-ping {
   position: absolute;
-
-  width: clamp(75px, 11vw, 125px);
+  width: clamp(70px, 8vw, 100px);
   height: auto;
-
   left: 50%;
   top: 50%;
-
   transform: translate(-50%, -50%) scale(0.8);
-
   display: block;
-
   object-fit: contain;
-
   opacity: 0;
-
   z-index: 1;
-
-  animation: heartPing 1.8s ease-out infinite;
-
+  animation: heartPing 1.6s ease-out infinite;
   pointer-events: none;
+  will-change: transform, opacity;
 }
 
 @keyframes heartPulse {
@@ -1836,23 +1817,23 @@ header[id] {
   }
 
   50% {
-    transform: scale(1.12);
+    transform: scale(1.16);
   }
 }
 
 @keyframes heartPing {
   0% {
     transform: translate(-50%, -50%) scale(0.8);
-    opacity: 0.45;
+    opacity: 0.8;
   }
 
-  65% {
-    transform: translate(-50%, -50%) scale(1.55);
+  70% {
+    transform: translate(-50%, -50%) scale(2);
     opacity: 0;
   }
 
   100% {
-    transform: translate(-50%, -50%) scale(1.55);
+    transform: translate(-50%, -50%) scale(2);
     opacity: 0;
   }
 }
@@ -3965,14 +3946,14 @@ header[id] {
   }
 
   .heart-bg {
-    width: 250px;
-    height: 205px;
-    top: -5px;
+    width: 210px;
+    height: 175px;
+    top: -2px;
   }
 
   .heart-image,
   .heart-ping {
-    width: 82px;
+    width: 72px;
   }
 
   .small-title {
