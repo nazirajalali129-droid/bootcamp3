@@ -1469,7 +1469,7 @@ header[id] {
 .process-section {
   position: relative;
 
-  min-height: 620px;
+  min-height: 220px;
 
   overflow: hidden;
 
@@ -1480,7 +1480,7 @@ header[id] {
   width: calc(100% - 100px);
   max-width: 1100px;
 
-  height: 500px;
+  height: 400px;
 
   margin: 0 auto;
 
@@ -3874,7 +3874,7 @@ header[id] {
 
   .process-section {
     width: 100%;
-    min-height: 1000px;
+    min-height: 500px;
     padding: 30px 0;
   }
 
@@ -4226,7 +4226,7 @@ header[id] {
 @media (max-width: 700px) {
   .process-section {
     width: 100%;
-    min-height: 700px;
+    min-height: 500px;
     padding: 35px 0 50px;
     overflow: hidden;
   }
@@ -5846,5 +5846,18 @@ header[id] {
 
   50% {
     transform: scale(1.15);
+  }
+}
+@media (max-width: 700px) {
+  .heart-bg {
+    width: 115px;
+    height: 115px;
+    top: -75px;
+  }
+
+  .heart-image,
+  .heart-ping {
+    width: 115px;
+    height: 115px;
   }
 }
